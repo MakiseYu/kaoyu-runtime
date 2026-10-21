@@ -1,0 +1,7 @@
+dist/
+cache/
+*.tar.gz
+*.tar.xz
+*.pk8
+*.jks
+.signing/
