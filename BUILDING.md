@@ -20,6 +20,8 @@ python3 tools/verify-runtime.py --packages-dir dist/runtime-arm64-v2 --manifest 
 
 默认工具链烟测以非 Root 用户执行真实 C/C++、CMake/Ninja、Python 原生扩展/venv、Node/npm、Rust 构建与单测、rustfmt 和 Clippy；这不替代 Android 保护环境下的真机测试。
 
+本次 `runtime-arm64-v2` 的验证边界：先完成依赖安装及 ARM64 QEMU 下普通 UID 的工具链烟测，再从已安装树冻结 580 个 Debian 包的版本锁；锁清单与该树的实际包清单逐字节一致，按锁定版本执行 APT 模拟安装报告无变化。最终源镜像和分体包由这棵已验证的安装树完成归档，锁清单落盘后未重新从基础 rootfs 完整构建一次。归档内容、包清单、工具链及策略文件已逐项核验，两个分体包与源镜像的完整且互不重叠的内容对应关系校验已通过；这些结果不代表已验证从基础镜像完整重建的过程或字节一致性。
+
 发布前复制审核过的清单和包清单到客户端，使用独立私钥对 `runtime.properties` 原始字节做 SHA256withRSA 签名。签名文件同时放入客户端 `packages.properties.sig`，客户端 `packages.properties` 必须与签名原文逐字节一致。公钥 DER 保存在仓库，私钥由发布者离线保管。
 
 `sign-update.ps1` 在 PowerShell 7 中签名；`publish-runtime.ps1` 使用 Git 已配置的 GitHub 登录，将资产上传为草稿并与 GitHub 返回的 SHA-256 核对，只有显式 `-Publish` 才发布。不要替换已经公开的版本资产；内容改变应新增版本。
