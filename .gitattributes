@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.properties -text
+*.der -text
+*.sig -text
+*.gz -text
+*.xz -text

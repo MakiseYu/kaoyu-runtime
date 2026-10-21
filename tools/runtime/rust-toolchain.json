@@ -1,0 +1,13 @@
+{
+  "version": "1.99.1",
+  "target": "aarch64-unknown-linux-gnu",
+  "manifest": "https://static.rust-lang.org/dist/2026-10-15/channel-rust-stable.toml",
+  "manifest_sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+  "components": [
+    {"name": "rustc", "sha256": "acdcdfe09ae1f103aa9a2b7f88903a9588bc2e99288af10e6fbf5514e2e49f25"},
+    {"name": "cargo", "sha256": "5156832e0c1254e9b49a79edabdc6d4c35f32f8fc1cf3ca700f268ff96087ab0"},
+    {"name": "rust-std", "sha256": "e25668477083d6a9ddb87b9beb9c00742225f38233ccb4bfba3afa7a07427f52"},
+    {"name": "rustfmt", "sha256": "26b3200b1461921415927abf7fe410202a6eda2db3e419abde59e0abfcd93fc2"},
+    {"name": "clippy", "sha256": "3bea76c26dcf30c176c0a8a8cc283eb59fabd754e24a68b4ca0701e5f3245f6b"}
+  ]
+}

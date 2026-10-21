@@ -1,0 +1,33 @@
+{
+  "canonical_root_relative_paths": true,
+  "compression_level": 9,
+  "disjoint_archives": true,
+  "format": 1,
+  "gzip_original_filename": null,
+  "gzip_timestamp": 0,
+  "packages": {
+    "codex": {
+      "archive": "kaoyu-codex-0.163.0-arm64-v1.tar.gz",
+      "bytes": "149347345",
+      "entries": 52,
+      "sha256": "c2b0e7f1396928aaab45f10a4fe42da54a75dd4fa3b1f79543dcd5cffa5dcd21",
+      "tar.bytes": "385187840",
+      "unpacked.bytes": "385139339"
+    },
+    "debian": {
+      "archive": "kaoyu-debian-12-bookworm-arm64-v2.tar.gz",
+      "bytes": "461643988",
+      "entries": 50507,
+      "sha256": "6e2b1f11e99c1cb8d44e52c380ff9bdb6acdaf282bd4433830005c0c5ddb073b",
+      "tar.bytes": "1404467200",
+      "unpacked.bytes": "1366321836"
+    }
+  },
+  "payload_metadata_link_equivalence": true,
+  "source_archive": "debian-arm64.tar.gz",
+  "source_bytes": 611271812,
+  "source_entries": 50559,
+  "source_regular_payload_bytes": 1751461175,
+  "source_sha256": "f7cf56508a8ba0344f2cf6064631cd7e4d53e699cabc1ed397623cc123aad449",
+  "tar_format": "GNU"
+}
